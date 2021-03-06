@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API 사용방법</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    
+    <!-- header -->
+    <header>
+        <a href="index.html" id="logo">Cha Data Research Corporation</a>
+        <nav>
+           <ul id="main-menu">
+               <li><a href="index.html">Home</a></li>
+               <li class="active"><a href="api.html">API 사용방법</a></li>
+               <li><a href="download.html">수동 다운로드</a></li>
+               <li><a href="subscribe.html">구독</a></li>
+               <li><a href="support.html">고객지원</a></li>
+               <li><a href="login.html">Login</a></li>
+           </ul> 
+        </nav>
+    </header>
+    <!-- //header -->
+
+    <!-- api section -->
+    <section id="api">
+        <div class="api-nav">
+            <ul id="api-menu">
+                <li><a href="api.html">API 사용 규칙</a></li>
+                <li><a href="api.html">주식 목록</a></li>
+                <li><a href="api.html">주식 데이터</a></li>
+                <li><a href="api.html">Forex (FX)</a></li>
+                <li><a href="api.html">가상화폐</a></li>
+                <li><a href="api.html">ADR</a></li>
+            </ul>
+        </div>
+        <div class="api-sub contents">
+            <h1>Time Series Stock APIS</h1>
+
+            <P>
+                This suite of APIs provide global equity date in 4 different temporal resolutions: (1) daily, (2) weekly, (3) monthly, and (4) intraday. Daily, weekly, and monthly time series contain 20+ years of historical data.
+            </P>
+
+            <h2>TIME_SERIES_INTRADAY</h2>
+
+            <p>
+                This API returns intraday time series of the equity specified, covering <span class="underline">extended trading hours</span> where applicable (e.g., 4:00am to 8:00pm Eastern Time for the US market).
+                The inraday data is computed directly from the Securities Information Processor (SIP) market-aggregated data feed.
+                You can query both raw (as-traded) and split/dividend-adjusted intraday data from this endpoint.<br>
+                <br>
+                This API returns the most recent 1-2 months of intraday data and is best suited for short-term/medium-term charting and trading strategy development.
+                If you are targeting a deeper intraday history, please use the <a href="subscribe.html">Extended Intraday API</a>.
+            </p>
+
+            <h3>API Parameters</h3>
+
+
+
+        </div>
+    </section>
+    <!-- // api section -->
+
+    <!-- footer -->
+    <footer>
+        <p>copyright&copy; cdrc.co.kr allrights reserved.</p>
+        <ul id="footer-menu">
+            <li><a href="#">CDRC 이용약관</a></li>
+            <li><a href="#">개인정보처리방침</a></li>
+            <li><a href="#">이용안내</a></li>
+        </ul>
+    </footer>
+
+</body>
+</html>
