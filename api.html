@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>API 사용방법</title>
+    <title>CDRC</title>
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
     
     <!-- header -->
     <header>
-        <a href="index.html" id="logo">Cha Data Research Corporation</a>
+        <a href="index.html" id="logo"><img src="/img/logo.png" alt=""></a>
         <nav>
            <ul id="main-menu">
                <li><a href="index.html">Home</a></li>
@@ -19,7 +19,7 @@
                <li><a href="download.html">수동 다운로드</a></li>
                <li><a href="subscribe.html">구독</a></li>
                <li><a href="support.html">고객지원</a></li>
-               <li><a href="login.html">Login</a></li>
+               <li><a href="login.html" class="login-btn">Login</a></li>
            </ul> 
         </nav>
     </header>
@@ -30,7 +30,7 @@
         <div class="api-nav">
             <ul id="api-menu">
                 <li><a href="api.html">API 사용 규칙</a></li>
-                <li><a href="api.html">주식 목록</a></li>
+                <li class="active"><a href="api.html">주식 목록</a></li>
                 <li><a href="api.html">주식 데이터</a></li>
                 <li><a href="api.html">Forex (FX)</a></li>
                 <li><a href="api.html">가상화폐</a></li>
@@ -57,8 +57,16 @@
 
             <h3>API Parameters</h3>
 
+            <h4><span class="accent"></span>Required: <span class="point">function</span></h4>
+            <p>The time series of your choice. In this case, <span class="point">function=TIME_SERIES_INTRADAY</span></p>
 
+            
+            <h4><span class="accent"></span>Required: <span class="point">symbol</span></h4>
+            <p>The name of the equity of your choice. For example: <span class="point">symbol=IBM</span></p>
 
+            
+            <h4><span class="accent"></span>Required: <span class="point">interval</span></h4>
+            <p>Time interval between two consecutive data points in the time series. The following values are supported: <span class="point">1min</span>, <span class="point">5min</span>, <span class="point">15min</span>, <span class="point">30min</span>, <span class="point">60min</span></p>
         </div>
     </section>
     <!-- // api section -->

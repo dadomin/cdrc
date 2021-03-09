@@ -4,22 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>로그인</title>
+    <title>CDRC</title>
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
     
     <!-- header -->
     <header>
-        <a href="index.html" id="logo">Cha Data Research Corporation</a>
+        <a href="index.html" id="logo"><img src="/img/logo.png" alt=""></a>
         <nav>
            <ul id="main-menu">
                <li><a href="index.html">Home</a></li>
-               <li><a href="api.html">API 사용방법</a></li>
+               <li class="active"><a href="api.html">API 사용방법</a></li>
                <li><a href="download.html">수동 다운로드</a></li>
                <li><a href="subscribe.html">구독</a></li>
                <li><a href="support.html">고객지원</a></li>
-               <li class="active"><a href="login.html">Login</a></li>
+               <li><a href="login.html" class="login-btn">Login</a></li>
            </ul> 
         </nav>
     </header>
@@ -27,21 +27,23 @@
 
     <!-- login section -->
     <section id="login">
-        <button><a href="#">Cha Data Research Corporation</a></button>
-        <div class="login-form">
-            <h1>Sign-In</h1>
-            <div class="login-box">
-                <p>Email</p>
-                <input type="text">
+        <div class="size">
+            <div id="login-form">
+                <h1>Sign In</h1>
+                <p><a href="api.html">Cha Datat Research Corporation</a></p>
+                <div class="login-input">
+                    <p>Email</p>
+                    <input type="text" placeholder="Your E-mail">
+                </div>
+                <div class="login-input">
+                    <p>비밀번호</p>
+                    <button>비밀번호를 잊으셨나요?</button>
+                    <input type="password" placeholder="PASSWROD">
+                </div>
+                <button>LOG IN</button>
             </div>
-            <div class="login-box">
-                <p>Password</p>
-                <input type="password">
-            </div>
-            <button>로그인</button>
-            <a href="#">비밀번호를 잊으셨나요?</a>
+            <p>아직 계정이 없으시다면, <a href="#">회원가입</a>을 해주세요.</p>
         </div>
-        <p>아직 계정이 없으시다면, <a href="#">회원가입</a>을 해주세요.</p>
     </section>
     <!-- // login section -->
 
