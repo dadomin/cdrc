@@ -1,3 +1,4 @@
+@charset "utf-8";
 * {
     margin: 0;
     padding: 0;
@@ -84,12 +85,11 @@ header > nav {
     border-radius: 7px;
     padding: 7px 12px;
     transition: .3s;
-    
     background-color: #204891;
     color: #fff;
 }
 .login-btn:hover {
-    background-color: #fff;
+    background-color: rgba(255,255,255,0);
     color: #204891;
 }
 
@@ -534,4 +534,191 @@ footer {
     float: left;
     margin: 0 10px;
     font-weight: bold;
+}
+#header-menu-open {
+    display: none;
+    width: 180px;
+    background-color: #e2eefd;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    color: #4472c3;
+    font-weight: bold;
+    font-size: 21px;
+}
+
+@media (max-width: 767px){
+    .in {
+        width: 400px;
+    }
+    header {
+        height: 120px;
+        position: relative;
+    }
+    
+    #header-menu-open {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+    header > nav {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 180px;
+        background-color: #e2eefd;
+        border-bottom-left-radius: 12px;
+        border-bottom-right-radius: 12px;
+    }
+    #main-menu {
+        display: none;
+        width: 100%;
+        height: auto;
+    }
+    #main-menu > li {
+        width: 100%;
+        padding: 7px 0;
+        margin: 0;
+    }
+    #main-menu > li:nth-last-child(1){
+        padding: 0;
+    }
+    #header-menu-open:hover ~ nav > #main-menu,
+    #main-menu:hover {
+        display: block;
+    }
+
+    .main-title {
+        height: 200px;
+        padding-top: 25px;
+    }
+    .main-title > img {
+        width: 200px;
+    }
+    .main-title p {
+        font-size: 25px;
+    }
+    .main-title p >span {
+        font-size: 32px;
+    }
+
+    #main-list-title {
+        margin-top: 50px;
+    }
+    #main-list-title > img {
+        width: 150px;
+    }
+    #main-list-title > h2 {
+        font-size: 25px;
+    }
+    #main-list {
+        width: 400px;
+        margin: 20px auto;
+        flex-direction: column;
+    }
+    #main-list > div {
+        margin: 0;
+        width: 100%;
+    }
+    .main-buttons {
+        width: 400px; 
+        height: auto;
+        flex-direction: column;
+    }
+    .main-buttons > button {
+        margin-bottom: 12px;
+    }
+
+    footer {
+        height: 140px;
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .in {
+        width: 600px;
+    }
+    header {
+        height: 150px;
+        position: relative;
+    }
+    
+    #header-menu-open {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+    header > nav {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 180px;
+        background-color: #e2eefd;
+        border-bottom-left-radius: 12px;
+        border-bottom-right-radius: 12px;
+    }
+    #main-menu {
+        display: none;
+        width: 100%;
+        height: auto;
+    }
+    #main-menu > li {
+        width: 100%;
+        padding: 7px 0;
+        margin: 0;
+    }
+    #main-menu > li:nth-last-child(1){
+        padding: 0;
+    }
+    #header-menu-open:hover ~ nav > #main-menu,
+    #main-menu:hover {
+        display: block;
+    }
+
+    .main-title {
+        height: 250px;
+        padding-top: 25px;
+    }
+    .main-title > img {
+        width: 250px;
+    }
+    .main-title p {
+        font-size: 35px;
+    }
+    .main-title p >span {
+        font-size: 40px;
+    }
+    #main-list-title {
+        margin-top: 50px;
+    }
+    #main-list-title > img {
+        width: 170px;
+    }
+    #main-list-title > h2 {
+        font-size: 32px;
+    }
+    #main-list {
+        width: 600px;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    #main-list > div {
+        flex: none;
+        width: 250px;
+    }
+    .main-buttons {
+        width: 600px;
+    }
+
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+}
+
+@media (min-width: 1200px) {
 }

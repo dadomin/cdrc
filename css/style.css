@@ -50,6 +50,7 @@ header {
     left: 0;
     background-color: #fff;
     box-shadow: 0 0 10px 10px rgba(194, 226, 255, .2);
+    z-index: 100;
 }
 header > #logo {
     float: left;
@@ -85,12 +86,11 @@ header > nav {
     border-radius: 7px;
     padding: 7px 12px;
     transition: .3s;
-    
     background-color: #204891;
     color: #fff;
 }
 .login-btn:hover {
-    background-color: #fff;
+    background-color: rgba(255,255,255,0);
     color: #204891;
 }
 
@@ -536,231 +536,414 @@ footer {
     margin: 0 10px;
     font-weight: bold;
 }
-
-@media all and (min-width: 1200px) and (max-width:1500px) {
-    body {
-        width: 100%;
-    }
-    .in {
-        width: 1000px;
-    }
-    .main-title {
-        height: 500px;
-    }
-
-    .main-title p {
-        font-size: 45px;
-    }
-    .main-title p > span {
-        font-size: 52px;
-    }
-    .main-title img {
-        width: 500px;
-    }
-    #main-list-title {
-        margin-top: 120px;
-    }
-    #main-list-title > img {
-        width: 20px;
-    }
-    #main-list-title > h2 {
-        font-size: 42px;
-    }
-    #main-list {
-        width: 1500px;
-        margin: 30px auto;
-    }
-    #main-list > div {
-        margin: 0;
-        font-size: 16px;
-    }
-    #api {
-        width: 1000px;
-        margin: 50px auto;
-    }
-    #api-menu > li {
-        height: 45px;
-        font-size: 17px;
-    }
-
-    #support {
-        width: 1000px;
-        margin: 20px auto;
-    }
-    #login {
-        padding: 120px 0;
-    }
+#header-menu-open {
+    display: none;
+    width: 180px;
+    background-color: #e2eefd;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    color: #4472c3;
+    font-weight: bold;
+    font-size: 21px;
 }
 
-@media all and (min-width: 1000px) and (max-width: 1200px) {
-    
-    body {
-        width: 100%;
-    }
+@media (max-width: 767px){
     .in {
-        width: 800px;
+        width: 400px;
     }
-    .main-title {
-        height: 350px;
+    header {
+        height: 120px;
+        position: relative;
+    }
+    
+    #header-menu-open {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+    header > nav {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 180px;
+        background-color: #e2eefd;
+        border-bottom-left-radius: 12px;
+        border-bottom-right-radius: 12px;
+    }
+    #main-menu {
+        display: none;
+        width: 100%;
+        height: auto;
+    }
+    #main-menu > li {
+        width: 100%;
+        padding: 7px 0;
+        margin: 0;
+    }
+    #main-menu > li:nth-last-child(1){
+        padding: 0;
+    }
+    #header-menu-open:hover ~ nav > #main-menu,
+    #main-menu:hover {
+        display: block;
     }
 
+    .main-title {
+        height: 200px;
+        padding-top: 25px;
+    }
+    .main-title > img {
+        width: 200px;
+    }
     .main-title p {
+        font-size: 25px;
+    }
+    .main-title p >span {
         font-size: 32px;
     }
-    .main-title p > span {
-        font-size: 42px;
-    }
-    .main-title img {
-        width: 300px;
-    }
+
     #main-list-title {
-        margin-top: 70px;
+        margin-top: 50px;
     }
     #main-list-title > img {
-        width: 180px;
+        width: 150px;
     }
     #main-list-title > h2 {
-        font-size: 32px;
+        font-size: 25px;
     }
     #main-list {
-        width: 900px;
-        margin: 30px auto;
+        width: 400px;
+        margin: 20px auto;
+        flex-direction: column;
     }
     #main-list > div {
         margin: 0;
-        font-size: 16px;
-    }
-    #api {
-        width: 1000px;
-        margin: 50px auto;
-    }
-    #api-menu > li {
-        height: 45px;
-        font-size: 17px;
-    }
-
-    #support {
-        width: 1000px;
-        margin: 20px auto;
-    }
-    #login {
-        padding: 120px 0;
-    }
-}
-
-
-@media all and (min-width: 800px) and (max-width: 1000px) {
-    
-    body {
         width: 100%;
     }
-    .in {
-        width: 600px;
+    .main-buttons {
+        width: 400px; 
+        height: auto;
+        flex-direction: column;
     }
-    .main-title {
-        height: 350px;
+    .main-buttons > button {
+        margin-bottom: 12px;
     }
 
-    .main-title p {
-        font-size: 32px;
+    footer {
+        height: 140px;
+        flex-direction: column;
     }
-    .main-title p > span {
-        font-size: 42px;
+
+    #api {
+        width: 400px;
+        margin: 30px auto;
+        flex-direction: column;
     }
-    .main-title img {
-        width: 300px;
+    .api-nav {
+        flex: none;
     }
-    #main-list-title {
-        margin-top: 70px;
+    #api-menu> li {
+        font-size: 13px;
+        height: 30px;
+        margin-bottom: 7px;;
     }
-    #main-list-title > img {
-        width: 180px;
+    #api-menu > li.active {
+        margin: 12px auto;
     }
-    #main-list-title > h2 {
-        font-size: 32px;
+    .api-sub {
+        flex: none;
     }
-    #main-list {
-        width: 800px;
+    .contents {
+        padding: 30px 0;
+    }
+    .contents > h1 {
+        font-size: 35px;
+        padding-bottom: 7px;
+        margin-bottom: 30px;
+    }
+    .contents > p {
+        margin: 10px 0;
+        line-height: 1.4;
+        font-size: 15px;
+    }
+    .contents > h2 {
+        font-size: 25px;
+        margin: 30px 0;
+    }
+    .contents > h3 {
         margin: 30px auto;
     }
-    #main-list > div {
-        margin: 0;
-        font-size: 16px;
+    .download-form {
+        width: 400px;
+        padding: 15px 30px;
+        margin: 30px auto;
     }
-    #api {
-        width: 1000px;
-        margin: 50px auto;
-    }
-    #api-menu > li {
-        height: 45px;
-        font-size: 17px;
-    }
-
-    #support {
-        width: 800px;
-        margin: 20px auto;
-    }
-    #login {
-        padding: 120px 0;
-    }
-}
-
-
-@media all and (min-width: 600px) and (max-width: 800px) {
-    
-    body {
+    .download-input-boxes > div{
         width: 100%;
     }
-    .in {
-        width: 600px;
+    .subscribe-main > button {
+        width: 400px;
     }
-    .main-title {
-        height: 350px;
+    .subscribe-sub {
+        flex-direction: column;
+        justify-content: space-around;
     }
-
-    .main-title p {
-        font-size: 32px;
+    .subscribe-sub-box {
+        margin-bottom: 21px;
     }
-    .main-title p > span {
-        font-size: 42px;
-    }
-    .main-title img {
-        width: 300px;
-    }
-    #main-list-title {
-        margin-top: 70px;
-    }
-    #main-list-title > img {
-        width: 180px;
-    }
-    #main-list-title > h2 {
-        font-size: 32px;
-    }
-    #main-list {
-        width: 1000px;
-        margin: 30px auto;
-    }
-    #main-list > div {
-        margin: 0;
-        font-size: 16px;
-    }
-    #api {
-        width: 600px;
-        margin: 50px auto;
-    }
-    #api-menu > li {
-        height: 45px;
-        font-size: 17px;
-    }
-
     #support {
-        width: 1000px;
-        margin: 20px auto;
+        width: 400px;
     }
     #login {
         padding: 50px 0;
     }
 }
 
+@media (min-width: 768px) and (max-width: 991px) {
+    .in {
+        width: 600px;
+    }
+    header {
+        height: 150px;
+        position: relative;
+    }
+    
+    #header-menu-open {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+    header > nav {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 180px;
+        background-color: #e2eefd;
+        border-bottom-left-radius: 12px;
+        border-bottom-right-radius: 12px;
+    }
+    #main-menu {
+        display: none;
+        width: 100%;
+        height: auto;
+    }
+    #main-menu > li {
+        width: 100%;
+        padding: 7px 0;
+        margin: 0;
+    }
+    #main-menu > li:nth-last-child(1){
+        padding: 0;
+    }
+    #header-menu-open:hover ~ nav > #main-menu,
+    #main-menu:hover {
+        display: block;
+    }
 
+    .main-title {
+        height: 250px;
+        padding-top: 25px;
+    }
+    .main-title > img {
+        width: 250px;
+    }
+    .main-title p {
+        font-size: 35px;
+    }
+    .main-title p >span {
+        font-size: 40px;
+    }
+    #main-list-title {
+        margin-top: 50px;
+    }
+    #main-list-title > img {
+        width: 170px;
+    }
+    #main-list-title > h2 {
+        font-size: 32px;
+    }
+    #main-list {
+        width: 600px;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    #main-list > div {
+        flex: none;
+        width: 250px;
+    }
+    .main-buttons {
+        width: 600px;
+    }
 
+    #api {
+        width: 600px;
+        margin: 30px auto;
+        flex-direction: column;
+    }
+    .api-nav {
+        flex: none;
+    }
+    #api-menu> li {
+        font-size: 15px;
+        height: 40px;
+        margin-bottom: 12px;
+    }
+    #api-menu > li.active {
+        margin: 15px auto;
+    }
+    .api-sub {
+        flex: none;
+    }
+    .contents {
+        padding: 30px 0;
+    }
+    .contents > h1 {
+        font-size: 35px;
+        padding-bottom: 7px;
+        margin-bottom: 30px;
+    }
+    .contents > p {
+        margin: 10px 0;
+        line-height: 1.4;
+        font-size: 15px;
+    }
+    .contents > h2 {
+        font-size: 25px;
+        margin: 30px 0;
+    }
+    .contents > h3 {
+        margin: 30px auto;
+    }
+    .download-form {
+        width: 600px;
+        padding: 30px 45px;
+        margin: 50px auto;
+    }
+    .download-input-boxes > div{
+        width: 100%;
+    }
+    .subscribe-main > button {
+        width: 600px;
+    }
+    .subscribe-sub {
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .subscribe-sub-box {
+        margin-bottom: 21px;
+    }
+    #support {
+        width: 400px;
+    }
+    #login {
+        padding: 80px 0;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .in {
+        width: 800px;
+    }
+    header {
+        height: 80px;
+    }
+    .main-title {
+        height: 300px;
+        padding-top: 28px;
+    }
+    .main-title > img {
+        width: 330px;
+    }
+    .main-title p {
+        font-size: 40px;
+    }
+    .main-title p >span {
+        font-size: 45px;
+    }
+    #main-list {
+        width: 800px;
+        flex-wrap: wrap;
+    }
+    #main-list > div {
+        flex: none;
+        width: 350px;
+    }
+    
+    #api {
+        width: 900px;
+        margin: 30px auto;
+    }
+    #api-menu> li {
+        font-size: 15px;
+        height: 40px;
+        margin-bottom: 15px;
+    }
+    .download-form {
+        width: 800px;
+        padding: 30px 45px;
+        margin: 50px auto;
+    }
+    .subscribe-main > button {
+        width: 800px;
+    }
+    .subscribe-sub-box {
+        margin: 0 7px;
+    }
+    #support {
+        width: 900px;
+    }
+    #login {
+        padding: 80px 0;
+    }
+}
+
+@media (min-width: 1200px) {
+    .in {
+        width: 1000px;
+    }
+    .main-title {
+        height: 350px;
+        padding-top: 40px;
+    }
+    .main-title > img {
+        width: 350px;
+    }
+    #main-list {
+        width: 1000px;
+    }
+    #main-list > div {
+        margin: 0;
+    }
+    
+    #api {
+        width: 1000px;
+        margin: 30px auto;
+    }
+    #api-menu> li {
+        font-size: 15px;
+        height: 40px;
+        margin-bottom: 12px;
+    }
+    .download-form {
+        width: 1000px;
+        padding: 30px 45px;
+        margin: 80px auto;
+    }
+    .subscribe-main > button {
+        width: 1000px;
+    }
+    .subscribe-sub-box {
+        margin: 0 14px;
+    }
+    #support {
+        width: 1000px;
+    }
+    #login {
+        padding: 120px 0;
+    }
+}
